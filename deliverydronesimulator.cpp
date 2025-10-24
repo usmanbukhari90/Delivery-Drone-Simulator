@@ -71,7 +71,126 @@ int main() {
     cin >> location;
     cout << endl;
     obstacle();
-  
+  //Usman Adding Code not finalzed Still
+  #include <iostream>
+#include <conio.h>
+#include <algorithm>
+#include <iomanip>
+#include <math.h>
+#include <ctime>
+using namespace std;
+int battery = 100;
+char LOCATION(char x)
+{
+    if (x == 'A')
+        return -10;
+    else if (x == 'B')
+        return -14;
+    else if (x == 'c')
+        return -16;
+    else if (x != 'A' && x != 'B' && x != 'C')
+        cout << "Invalid Location Sorry";
+}
+void OBSTACLES(int x)
+{
+    if (x == 3)
+    {
+        cout << "         WARNNING!     " << endl;
+        cout << "     Birds are Present     " << endl;
+        cout << "  The drone is rerouted!   " << endl;
+        battery = battery - 5;
+    }
+    else if (x == 5)
+    {
+        cout << "         WARNNING!     " << endl;
+        cout << "        DANGER ZONE     " << endl;
+        cout << "  The drone is rerouted!  " << endl;
+        battery = battery - 5;
+    }
+    else if (x == 1)
+    {
+        cout << "         Welcome      " << endl;
+        cout << "  Their are no Obstacles " << endl;
+        cout << "Drone is ready to take off " << endl;
+    }
+    else if (x == 2)
+    {
+        cout << "         Welcome      " << endl;
+        cout << "  Their are no Obstacles " << endl;
+        cout << "Drone is ready to take off " << endl;
+    }
+    else if (x == 4)
+    {
+        cout << "         Welcome      " << endl;
+        cout << "  Their are no Obstacles " << endl;
+        cout << "Drone is ready to take off " << endl;
+    }
+}
+void WEATHER_CHECK(int x)
+{
+    if (x == 1)
+    {
+        cout << "        Weather is Sunny" << endl;
+        cout << "    Perfect day for delivery" << endl;
+        cout << "Package is Delivered Sucessfully" << endl;
+    }
+    else if (x == 2)
+    {
+        cout << "        Weather is Windy" << endl;
+    }
+    else if (x == 3)
+    {
+        cout << "    Weather is rainy" << endl;
+        cout << "    Delivery Delayed" << endl;
+    }
+}
+int main()
+{
 
+    cout << "Drone Delivery Simulator!" << endl
+         << endl;
+
+    char location;
+    cout << "Select a Location!(A or B or C) ";
+    cin >> location;
+    battery = 100 + LOCATION(location);
+    if (battery < 20)
+    {
+        cout << "More Deliveries are aborted for now";
+        cout << "Returning to Base for Recharge";
+        battery = 100;
+    }
+    int obstacles;
+    srand(time(0));
+    obstacles = 1 + rand() % 5;
+    cout << endl
+         << endl
+         << "      Obstacles Report! " << endl
+         << endl;
+    OBSTACLES(obstacles);
+    int weather;
+    cout << "     Weather Checking Report!" << endl
+         << endl;
+    srand(time(0));
+    weather = 1 + rand() % 3; // 1=sunny,2=windy,3=rainy
+    WEATHER_CHECK(weather);
+    if (weather == 2 && battery < 40)
+    {
+        cout << "    Bettery is Less then 40% " << endl;
+        cout << "        Delivery Delayed " << endl;
+        cout << "Returning to base for Recharge! " << endl;
+        battery = battery + 10;
+    }
+    else if (weather == 2)
+    {
+        cout << "       Delivery Delayed" << endl;
+    }
+    cout << battery;
+
+    _getch();
+    return 0;
+}
+  
+//till there code by Usman
     return 0;
 }
