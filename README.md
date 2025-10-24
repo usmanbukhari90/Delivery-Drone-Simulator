@@ -15,3 +15,23 @@ weather, battery levels, and obstacles.
 This problem reflects real-world challenges faced by delivery drones such as energy efficiency,
 decision-making, and mission optimization all done using C++ programming logic.
 
+-------------------------------------------------------------------------------------
+### Program Design & Logic:
+The simulator was designed using modular programming. Following fuctions were used.
+ | Functions | Details |
+ |------------|---------|
+ | void weather()| 
+
+ --------------------------------------------------------------------------------------
+ ### Exeution Instructions:
+
+ ----------------------------------------------------------------------------------------
+ ### Team Collaboration Summary
+
+ -----------------------------------------------------------------------------------------
+ ### AI Tool Used
+
+ 
+ -----------------------------------------------------------------------------------------
+ ### Future Improvements 
+ 
