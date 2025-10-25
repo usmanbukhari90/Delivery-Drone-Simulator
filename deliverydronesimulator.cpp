@@ -47,7 +47,7 @@ void weather(bool& fly) {
 }
 
 // OBSTACLE POSSIBILITY (1 chance in 5)
-bool obstacle() {
+bool obstacle(){
     int probability = 1 + rand() % 5; // 1 in 5 chance of an obstacle
     if (probability == 1) {
         bool desire;
