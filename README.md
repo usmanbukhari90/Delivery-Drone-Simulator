@@ -17,8 +17,10 @@ decision-making, and mission optimization all done using C++ programming logic.
 
 -------------------------------------------------------------------------------------
 ### Program Design & Logic:
-####Functions:
+#### Functions:
+
 The simulator was designed using modular programming. Following fuctions were used.
+
 -------------------------------------------------------------------------------------
 ##### Location Function
 Purpose:
@@ -187,6 +189,22 @@ These variables are used and updated within different functions and are displaye
           ****** THANK YOU! ******
    
       -------------------------------------
+
+   <img width="1396" height="740" alt="Screenshot 2025-10-26 112157" src="https://github.com/user-attachments/assets/75c4aac4-279e-4b64-9885-fdea95771ccc" />
+   <img width="1157" height="145" alt="Screenshot 2025-10-26 112422" src="https://github.com/user-attachments/assets/856a363a-e847-4511-8ce3-3c862519179b" />
+   <img width="1213" height="447" alt="Screenshot 2025-10-26 112244" src="https://github.com/user-attachments/assets/901ec117-60c1-4c99-ae59-6d08a3eb39c6" />
+
+If user don't want to start,
+<img width="1330" height="568" alt="Screenshot 2025-10-26 111943" src="https://github.com/user-attachments/assets/e7d8e4a5-22cf-4381-ad09-17478e7cb337" />
+
+For  Weather Delay,
+<img width="1399" height="775" alt="Screenshot 2025-10-26 112456" src="https://github.com/user-attachments/assets/932ec3f5-519c-4b17-8b63-1898057428ec" />
+<img width="1398" height="746" alt="Screenshot 2025-10-26 112719" src="https://github.com/user-attachments/assets/a9741501-8d82-4adb-a3cb-7752ba725f0d" />
+
+For Obstacles:
+<img width="1209" height="198" alt="Screenshot 2025-10-26 112353" src="https://github.com/user-attachments/assets/478a9de8-ed66-447d-9c00-dceba2e7f941" />
+
+
    
  --------------------------------------------------------------------------------------
  ### Execution Instructions:
