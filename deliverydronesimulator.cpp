@@ -12,6 +12,7 @@ int LOCATION(char x);
 void OBSTACLES(int x);
 void WEATHER_CHECK(int x);
 void DISPLAY_SUMMARY(int a, int b, int c, int d, int e);
+
 //Location Checking Function
 int LOCATION(char x)
 {
@@ -31,7 +32,9 @@ int LOCATION(char x)
         exit(0);
     }
 }
+
 //End Summary Function
+
 void DISPLAY_SUMMARY(int a, int b, int c, int d, int e)
 {
     cout << " Summary of Today's Deliveries! " << endl
@@ -44,7 +47,9 @@ void DISPLAY_SUMMARY(int a, int b, int c, int d, int e)
          << endl;
     cout << " ******** THANK YOU! ********";
 }
+
 //weather funtion by Nouman Majeed
+
 void WEATHER_CHECK(int x)
 {
     if (x == 1)
@@ -69,9 +74,46 @@ cout<<"_________________________________"<<endl<<endl;
     }
 }
 
+//Obstacle Checking function Module by Usman
 
-
-
+void OBSTACLES(int x)
+{
+    if (x == 3)
+    {
+        cout << "          WARNNING!     " << endl;
+        cout << "      Birds are Present     " << endl;
+        cout << "   The drone is rerouted!   " << endl;
+        battery = battery - 5;
+    }
+    else if (x == 5)
+    {
+        cout << "          WARNNING!     " << endl;
+        cout << "         DANGER ZONE     " << endl;
+        cout << "   The drone is rerouted!  " << endl;
+        battery = battery - 5;
+    }
+    else if (x == 1)
+    {
+        cout << "          Welcome      " << endl;
+        cout << "   Their are no Obstacles " << endl;
+        cout << " Drone is ready to take off " << endl;
+        cout<<"Delivery is Delivered Successfully"<<endl;
+    }
+    else if (x == 2)
+    {
+        cout << "          Welcome      " << endl;
+        cout << "   Their are no Obstacles " << endl;
+        cout << " Drone is ready to take off " << endl;
+        cout<<"Delivery is Delivered Successfully"<<endl;
+    }
+    else if (x == 4)
+    {
+        cout << "          Welcome      " << endl;
+        cout << "   Their are no Obstacles " << endl;
+        cout << " Drone is ready to take off " << endl;
+        cout<<"Delivery is Delivered Successfully"<<endl;
+    }
+}
 
 int main()
 {
@@ -113,7 +155,9 @@ int main()
         }
         }
     }
-continue_program:
+    
+ continue_program:
+ 
     cout << "Select a Location!(A or B or C) ";
     deliveries_given++;
     cin >> location;
@@ -168,11 +212,49 @@ continue_program:
     }
     cout << "________________________________" << endl
          << endl;
+    // obstacle logic added by Usman 
+             //obstacles Checking Logic Started From Here
+    int obstacles;
+    srand(time(0));
+    obstacles = 1 + rand() % 5;
+    cout<<"   Obstacles Checking Report! " << endl
+         << endl;
+    OBSTACLES(obstacles);
+    cout << "________________________________" << endl
+         << endl;
+     cout<<"Battery Remaining after "<<deliveries_given<<" Delivery = "<<battery<<"%"<<endl;   
+     cout << "________________________________" << endl
+         << endl;
+     while (battery > 20)
+    {
+         cout << "if you want to start another dilevery?(Press 1)  " << endl;
+        cout << "if you want the Drone to return to base for Recharge (Press 0) ";
+        int input;
+        cin >> input;
+        switch (input)
+        {
+        case 1:
+        {
+            cout <<endl<< "Let's Start another Delivery" << endl;
+            goto continue_program;
+            break;
+        }
+        case 0:
+        {
+            cout << "Drone has been returned to Base!" << endl<<endl;
+            cout<<"_________________________________"<<endl<<endl;
 
-
-    
-
-    
+            DISPLAY_SUMMARY(success, delayed, failed, battery, deliveries_given);
+            return 0;
+        }
+        default:
+        {
+            cout<<"Please Enter Correct input( 1 or 0)"<<endl;
+            continue;
+        }
+        }
+    }
+    DISPLAY_SUMMARY(success, delayed, failed, battery, deliveries_given);
 _getch();
 return 0;
 }
