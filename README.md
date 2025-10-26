@@ -23,8 +23,9 @@ The simulator was designed using modular programming. Following fuctions were us
  | void weather()| 
 
 
- <img width="836" height="1821" alt="Untitled Dia drawio" src="https://github.com/user-attachments/assets/7e5a652e-5515-4b03-b653-eef87eae4828" />
 
+
+<img width="886" height="1641" alt="flow drawio" src="https://github.com/user-attachments/assets/67b12f0e-1991-4269-8e81-7ad32dfcad89" />
 
  --------------------------------------------------------------------------------------
  ### Exeution Instructions:
