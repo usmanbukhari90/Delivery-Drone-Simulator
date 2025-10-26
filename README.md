@@ -4,7 +4,7 @@
 #### Group:
 | Name | Role | CMS ID|
 |------|------|-----------|
-| Syed Muhammad Usman Shah | Progammer ! (Team Lead)  |  |
+| Syed Muhammad Usman Shah | Progammer ! (Team Lead)  | 543991  |
 | Muhammad Salman Ali Malik | Logic Designer, Tester & Documenter| 552795 |
 | Muhammad Nouman Majeed | Progammer 2 | 551285 |
 -------------------------------------------------------------------------------
