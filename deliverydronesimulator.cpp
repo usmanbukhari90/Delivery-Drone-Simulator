@@ -45,7 +45,29 @@ void DISPLAY_SUMMARY(int a, int b, int c, int d, int e)
     cout << " ******** THANK YOU! ********";
 }
 //weather funtion by Nouman Majeed
-
+void WEATHER_CHECK(int x)
+{
+    if (x == 1)
+    {
+        cout << "        Weather is Sunny" << endl;
+        cout << "    Perfect day for delivery" << endl;
+        cout << "Package is Delivered Sucessfully" << endl;
+    }
+    else if (x == 2)
+    {
+        cout << "      Weather is Windy" << endl;
+    }
+    else if (x == 3)
+    {
+        cout << "      Weather is rainy" << endl;
+        cout << "      Delivery Delayed" << endl<<endl;
+        cout<<"_________________________________"<<endl<<endl;
+cout<<"Battery remaining after "<<deliveries_given<<" Deliveries = "<<battery<<"%"<<endl<<endl;
+cout<<"_________________________________"<<endl<<endl;
+         DISPLAY_SUMMARY(success, delayed, failed, battery, deliveries_given);
+         exit(0);
+    }
+}
 
 
 
