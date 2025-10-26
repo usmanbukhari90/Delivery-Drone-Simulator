@@ -181,11 +181,14 @@ These variables are used and updated within different functions and are displaye
      --------------------------------------------
    
            Summary of todays deliveries!
-      Deliveries given to drone = 1
+
+
+         Deliveries given to drone = 1
       Deliveries Delivered Successfully= 1
       deliveries Delayed but Delivered = 0
       Deliveries failed to deliver = 0
-           Battery remaining = 85%
+
+            Battery remaining = 85%
           ****** THANK YOU! ******
    
       -------------------------------------
