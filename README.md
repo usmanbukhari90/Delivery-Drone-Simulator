@@ -151,7 +151,7 @@ These variables are used and updated within different functions and are displaye
             Initial Battery:100%
         Lets Start Our Delivery Day!
        Press 1 for Yes & 0 for NO:_1_
-          System i=is Loading...
+          System is Loading...
       Select Locatiom!(A or B or C):_A_
    
      ----------------------------------
