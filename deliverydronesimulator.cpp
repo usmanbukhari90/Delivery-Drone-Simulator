@@ -45,6 +45,41 @@ void DISPLAY_SUMMARY(int a, int b, int c, int d, int e)
     cout << " ******** THANK YOU! ********";
 }
 //weather funtion by Nouman Majeed
+ //Weather Checking Report Started from Here in main
+    int weather;
+    cout <<endl<< "   Weather Checking Report!" << endl
+         << endl;
+    srand(time(0));
+    weather = 1 + rand() % 3; // 1=sunny,2=windy,3=rainy
+    if (weather == 1)
+    {
+        success++;
+    }
+    else if (weather == 2)
+    {
+        success++;
+        delayed++;
+        battery = battery - 5;
+    }
+    else if (weather == 3)
+    {
+        failed++;
+        battery = battery*1;
+    }
+    WEATHER_CHECK(weather);
+    if (weather == 2 && battery < 40)
+    {
+        cout << "    Bettery is Less then 40% " << endl;
+        cout << "        Delivery Delayed " << endl;
+        cout << "Returning to base for Recharge! " << endl;
+        battery = battery - 10;
+    }
+    else if (weather == 2)
+    {
+        cout << "      Delivery Delayed" << endl;  
+    }
+    cout << "________________________________" << endl
+         << endl;
 
 
 
