@@ -143,43 +143,50 @@ These variables are used and updated within different functions and are displaye
 
     SAMPLE OUTPUT:
            Drone Delivery Simulator
-         \ ---------------------------\
+   
+         ---------------------------
 
             Initial Battery:100%
         Lets Start Our Delivery Day!
        Press 1 for Yes & 0 for NO:_1_
           System i=is Loading...
       Select Locatiom!(A or B or C):_A_
-     \----------------------------------\
+   
+     ----------------------------------
 
           Weather Checking Report!
 
              Weather is Sunny
         Perfect day for delivery
     Package is delivered Successfully
-    \--------------------------------\
+   
+    --------------------------------
+   
          Obstacles Checking Report!
                  WARNING!
             Birds are Present
           The Drone is Rerouted!
-    \----------------------------------\
+   
+    ----------------------------------
+   
     Battery Remaining after 1 delivery = 85%
-    \-----------------------------------\
+   
+    -----------------------------------
+   
      if you want to start another delivery press 1
      if you want drone to return to base press 0
-     \--------------------------------------------\
+   
+     --------------------------------------------
+   
            Summary of todays deliveries!
       Deliveries given to drone = 1
       Deliveries Delivered Successfully= 1
       deliveries Delayed but Delivered = 0
       Deliveries failed to deliver = 0
            Battery remaining = 85%
-     \****** THANK YOU! ******\
+          ****** THANK YOU! ******
    
-   
-
-
-    \-------------------------------------\
+      -------------------------------------
    
  --------------------------------------------------------------------------------------
  ### Execution Instructions:
