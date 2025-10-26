@@ -12,7 +12,7 @@ int LOCATION(char x);
 void OBSTACLES(int x);
 void WEATHER_CHECK(int x);
 void DISPLAY_SUMMARY(int a, int b, int c, int d, int e);
-
+//Location Checking Function
 int LOCATION(char x)
 {
     if (x == 'A' || x == 'a')
@@ -31,7 +31,22 @@ int LOCATION(char x)
         exit(0);
     }
 }
+//End Summary Function
+void DISPLAY_SUMMARY(int a, int b, int c, int d, int e)
+{
+    cout << " Summary of Today's Deliveries! " << endl
+         << endl;
+    cout << "Deliveries given to Drone = " << e << endl;
+    cout << "Deliveries Delivered Successfuly = " << a << endl;
+    cout << "Deliveries Delayed but Delivered = " << b << endl;
+    cout << "Deliveries Failed to Deliver = " << c << endl;
+    cout << "   Battery Remaining: " << d << "%" << endl
+         << endl;
+    cout << " ******** THANK YOU! ********";
+}
 //weather funtion by Nouman Majeed
+
+
 
 
 
@@ -46,9 +61,59 @@ int main()
     int start;
     cout << " Lets Start our Delivery Day!" << endl;
     cout << " Press 1 for Yes & 0 for No: ";
+     while (true)
+    {
+        cin >> start;
+        switch (start)
+        {
+        case 1:
+        {
+            cout << "    System is Loading..." << endl;
+            goto continue_program;
+            break;
+        }
+        case 0:
+        {
+            cout << "        GOOD BYE!  " << endl
+                 << endl;
+            cout << "_______________________________" << endl
+                 << endl;
+            DISPLAY_SUMMARY(success, delayed, failed, battery, deliveries_given);
+            return 0;
+            break;
+        }
+        default:
+        {
+            cout << "Please Enter the Correct Input!" << endl;
+            cout << "_______________________________" << endl
+                 << endl;
+            cout << " Press 1 for Yes & 0 for No: ";
+            continue;
+        }
+        }
+    }
+continue_program:
+    cout << "Select a Location!(A or B or C) ";
+    deliveries_given++;
+    cin >> location;
+    if (location != 'A' && location != 'B' && location != 'C' && location != 'a'&& location != 'b'&& location != 'c')
+    {
+        failed++;
+    }
+    cout << endl;
+    cout << "________________________________"<<endl;
+    battery = battery + LOCATION(location);
+    if (battery < 20)
+    {
+        cout << "More Deliveries are aborted for now" << endl;
+        cout << "  Returning to Base for Recharge" << endl;
+         DISPLAY_SUMMARY(success, delayed, failed, battery, deliveries_given);
+            return 0;
+    }
     //Changes in main Function by Nouman Majeed for adding Weather Function Module
 
 
+    
 
     
 _getch();
